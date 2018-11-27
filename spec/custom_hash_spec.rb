@@ -3,11 +3,11 @@ require('pry')
 require('custom_hash.rb')
 
 describe(MyHash) do
-  describe("#myFetch") do
+  describe("#fetch") do
     it("retrieves a stored value by its key") do
-      test_hash = MyHash.new()
-      test_hash.myStore("kitten", "cute")
-      expect(test_hash.myFetch("kitten")).to(eq("cute"))
+      new_hash = MyHash.new()
+      new_hash.store("kitten", "cute")
+      expect(new_hash.fetch("kitten")).to(eq("cute"))
     end
   end
 end
